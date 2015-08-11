@@ -1,0 +1,15 @@
+{% for post in site.posts %}
+  <article class="post-item" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <h1 class="post-title-item" itemprop="name">{{ post.title }}</h1>
+      </a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          <meta itemprop="datePublished" content="{{ post.date }}">
+          <span class="datetime">{{ post.date | date: "%-d %b %Y" }} </span>
+        </time>
+      <div class="description">
+        <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ post.url | prepend: site.baseurl }}">Continue lendo</a>
+      </div>
+  </article>
+{% endfor %}

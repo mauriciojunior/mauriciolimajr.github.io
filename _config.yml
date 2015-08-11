@@ -1,0 +1,23 @@
+# Site settings
+title: Maurício Júnior - Desenvolvedor Front-End
+email: mjuniior92@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Maurício Júnior - Blog sobre desenvolvimento Front-End
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://mauriciolimajr.com.br" # the base hostname & protocol for your site
+twitter_username: mjunior1992
+github_username:  mauriciojunior
+feed: /feed.xml
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: /:title/
+
+exclude: ['node_modules', 'files', 'package.json', '_site']
