@@ -20,4 +20,4 @@ markdown: kramdown
 highlighter: pygments
 permalink: /:title/
 
-exclude: ['node_modules', 'files', 'package.json', '_site']
+exclude: ['node_modules', 'files', 'package.json']
