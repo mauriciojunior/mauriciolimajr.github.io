@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     cp = require('child_process'),
     prefixer = require('autoprefixer-stylus'),
     rupture = require('rupture')
-    ftp = require('gulp-ftp');
+    ftp = require('gulp-ftp'),
+    rsync = require( 'rsyncwrapper' ).rsync;
 
 
 gulp.task('jekyll-build', function( done ) {
@@ -45,15 +46,30 @@ gulp.task( 'js', function() {
     .pipe( gulp.dest( '_site/assets/js' ) )
     .pipe( browserSync.reload( { stream: true } ) );
 });
-gulp.task('deploy', function() {
-  return gulp.src('_site/**')
-    .pipe(ftp({
-        host: 'mauriciolimajr.com.br',
-        user: 'mauriciojunior@mauriciolimajr.com.br',
-        pass: 'marizas2'
-    }));
-});
+// gulp.task('deploy', function() {
+//   return gulp.src('_site/**')
+//     .pipe(ftp({
+//         host: 'mauriciolimajr.com.br',
+//         user: 'mauriciojunior@mauriciolimajr.com.br',
+//         pass: 'marizas2'
+//     }));
+// });
 
+gulp.task( 'deploy', function() {
+  rsync({
+    src: './_site/',
+    dest: 'mauriciojr@mauriciolimajr.com.br:/home/mauriciojr/public_html',
+    recursive: true,
+    args: [ '--verbose' ],
+    deleteAll: true,
+    compareMode: 'checksum',
+    onStdout: function( data ) {
+      console.log( data.toString() );
+    }
+  }, function( error, stdout, stderr, cmd ) {
+    console.log( 'END!' );
+  });
+});
 
 gulp.task( 'watch', function() {
   gulp.watch( 'files/styl/**/*.styl', [ 'stylus' ] );

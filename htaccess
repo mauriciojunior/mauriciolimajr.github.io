@@ -1,0 +1,8 @@
+IndexIgnore *
+# 301 redirect
+Options +FollowSymlinks
+RewriteEngine on
+rewritecond %{http_host} ^mauriciolimajr.com.br [NC]
+rewriterule ^(.*)$ http://www.mauriciolimajr.com.br/$1 [r=301,NC]
+# 404 error
+ErrorDocument 404 /404.html
