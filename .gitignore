@@ -1,3 +1,5 @@
 _site
 node_modules
 _drafts
+gulpfile.js
+package.json
