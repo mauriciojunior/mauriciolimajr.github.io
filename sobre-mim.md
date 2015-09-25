@@ -4,7 +4,9 @@ title: Sobre mim
 permalink: /sobre-mim/
 ---
 
-Sou um aspirante a Front-End Developer, que ama essa área por suas infinitas possibilidades de resolver atualmente qualquer tipo de problema e solução, tanto para desktop quanto para web e mobile.
+Sou um aspirante a Front-End Developer, que ama essa área por suas infinitas possibilidades de resolver atualmente qualquer tipo de problema e criar soluções/produtos, tanto para desktop quanto para web e mobile.
+
+Tenho 23 anos, sou apaixonado por web e café. HTML, CSS, Javascript e tocar teclado são as minhas habilidades.
 
 ## Skills
 
@@ -17,5 +19,5 @@ Sou um aspirante a Front-End Developer, que ama essa área por suas infinitas po
 
 ## Fale comigo :)
 
-Caso tenha alguma dúvida e queira entrar em contato mande um e-mail pra mim
+Caso tenha alguma dúvida e queira entrar em contato mande-me um e-mail
 <a href="mailto:mjuniior92@gmail.com">mjuniior92@gmail.com</a>
