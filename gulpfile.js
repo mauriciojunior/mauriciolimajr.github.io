@@ -46,14 +46,6 @@ gulp.task( 'js', function() {
     .pipe( gulp.dest( '_site/assets/js' ) )
     .pipe( browserSync.reload( { stream: true } ) );
 });
-// gulp.task('deploy', function() {
-//   return gulp.src('_site/**')
-//     .pipe(ftp({
-//         host: 'mauriciolimajr.com.br',
-//         user: 'mauriciojunior@mauriciolimajr.com.br',
-//         pass: 'marizas2'
-//     }));
-// });
 
 gulp.task( 'deploy', function() {
   rsync({
