@@ -47,22 +47,6 @@ gulp.task( 'js', function() {
     .pipe( browserSync.reload( { stream: true } ) );
 });
 
-gulp.task( 'deploy', function() {
-  rsync({
-    src: './_site/',
-    dest: 'mauriciojr@mauriciolimajr.com.br:/home/mauriciojr/public_html',
-    recursive: true,
-    args: [ '--verbose' ],
-    deleteAll: true,
-    compareMode: 'checksum',
-    onStdout: function( data ) {
-      console.log( data.toString() );
-    }
-  }, function( error, stdout, stderr, cmd ) {
-    console.log( 'END!' );
-  });
-});
-
 gulp.task( 'watch', function() {
   gulp.watch( 'files/styl/**/*.styl', [ 'stylus' ] );
   gulp.watch( 'files/js/**/*.js', [ 'js' ] );
