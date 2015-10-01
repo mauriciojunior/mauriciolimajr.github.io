@@ -3,7 +3,7 @@ layout: post
 title: "Gulp com ES6"
 date: 2015-09-25 19:04:23
 image: '/assets/img/'
-description:
+description: 'Escrevendo instruções do gulp com ECMAScript 6'
 tags:
 categories:
 twitter_text:
@@ -68,12 +68,12 @@ Agora você pode aproveitar e usar as arrow functions do ES6 no seu arquivo gulp
 segue um pequeno exemplo
 
 {% highlight js %}
-import 'gulp' from 'gulp';
-import 'jeet' from 'jeet';
-import 'stylus' from 'gulp-stylus';
-import 'rupture' from 'rupture';
-import 'prefixer' from 'autoprefixer-stylus';
-import 'koutoSwiss' from 'kouto-swiss';
+import gulp from 'gulp';
+import jeet from 'jeet';
+import stylus from 'gulp-stylus';
+import rupture from 'rupture';
+import prefixer from 'autoprefixer-stylus';
+import koutoSwiss from 'kouto-swiss';
 
 gulp.task( 'stylus', () => {
   gulp.src( 'files/styl/main.styl' )
